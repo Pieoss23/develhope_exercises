@@ -1,0 +1,15 @@
+#container{
+    
+    display: flex;  
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+#orange{
+    width: calc(2*100%);
+}
+
+#blue{
+    order: 1;
+}
+
