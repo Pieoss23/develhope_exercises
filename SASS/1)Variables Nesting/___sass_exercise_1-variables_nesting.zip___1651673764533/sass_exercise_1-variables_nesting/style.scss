@@ -1,0 +1,30 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green; 
+
+body {
+    div {
+        border: 1px solid $color-primary;
+        padding: 1.5em;
+        h1{
+            text-align: center;
+            color: $color-tertiary;
+            text-decoration: underline;
+            text-decoration-color: $color-secondary;
+        }
+        section {
+            display: flex;
+            justify-content: stretch;
+            article {
+                border: 1px solid $color-tertiary;
+                padding: 1.5em;
+                &:nth-child(even) {
+                    color: $color-primary;
+                }
+                &:nth-child(odd) {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+}
