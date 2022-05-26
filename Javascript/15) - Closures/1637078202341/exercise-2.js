@@ -1,5 +1,7 @@
 function pow(base) {
-  // ...
+  return function (power){
+    return Math.pow(base, power);
+  }
 }
 
 const pow2 = pow(2);
