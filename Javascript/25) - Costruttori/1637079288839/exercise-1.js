@@ -1,29 +1,32 @@
-
-const john = {
-  firstName: 'John',
-  lastName: 'Doe',
-  fullName(){
-    return this.firstName + ' ' + this.lastName;
+const person = {
+  get getNames() {
+    return `${this.firstName}`;
   },
-  set changeName(newName){
-    this.firstName = newName
-  }
-}
 
-const simon = {
-  firstName: 'Simon',
-  lastName: 'Collins',
-  fullName(){
-    return this.firstName + ' ' + this.lastName;
+  set setNames(setName) {
+    this.firstName = setName;
   },
-  get changeName(){
-    return this.firstName;
-  }
-}
+  
+  get getLastNames() {
+    return `${this.lastName}`;
+  },
+  
+  set setLastNames(setLastName) {
+    this.lastName = setLastName;
+  },
 
+  fullName: function  () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
 
+const john = Object.create(person);
+john.firstName = 'Jonh';
+john.lastName = 'Doe';
+
+const simon = Object.create(person);
+simon.firstName = "Simon"
+simon.lastName = "Collins"
 
 console.log(john.fullName()); // John Doe
-console.log(simon.firstName()); // Simon Collins
-
-
+console.log(simon.fullName()); // Simon Collins
