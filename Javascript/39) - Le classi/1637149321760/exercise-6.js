@@ -24,10 +24,12 @@ class AreaCalculator {
     } else if (figura.width && figura.height) {
       return 2 * (figura.width + figura.height);
     } else {
-      return Math.pow(figura.radius, 2) * 3.14;
+      return Math.pow(figura.radius, 2) * pi;
     }
   }
 }
+
+const pi = 3.14159265359;
 
 const square = new Square(4);
 const rectangle = new Rectangle(4, 2);

@@ -1,19 +1,14 @@
+// forEach, map, slice, splice, indexOf, includes, find, any, filter..
+
 function uncompletedNotes(notes) {
-  const noteNonComplete = [];
-  notes.forEach((note) => {
-    note.todos.forEach((b)=>{
-      noteNonComplete.push({todos: false});
+  return notes.filter(note => {
+    const filtro = note.todos.filter(todo => {
+      return todo.done === false
     })
-  });
-  for (let i = 0; i < notes.length; i++) {
-    for (let j = 0; j < notes[i].todos.length; j++) {
-      if (notes[i].todos[j].done === false) {
-        noteNonComplete.push();
-      }
-    } 
-  }
-  return noteNonComplete;
+    return filtro.length > 0
+  })
 }
+
 
 const notes = [
   {
