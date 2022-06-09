@@ -16,4 +16,4 @@ const obj = {
 };
 
 const person = Person.fromObject(obj);
-console.log(`${person.firstName} X ${person.lastName}`);
+console.log(`${person.firstName} ${person.lastName}`);
