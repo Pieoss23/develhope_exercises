@@ -7,20 +7,20 @@ class BankAccount {
 
   deposit(amount) {
     // throw an exception if amount is negative
-    if (amount < 0) {
-      this.#amount += amount;
-    } throw {
-      console.log(Error(""));
+    if (amount <= 0) {
+      throw new Error('The amount provided cannot be negative');
     }
+    this.#amount += amount;
   }
 
   withdraw(amount) {
-    // throw an exception if amount is negative or if withdrawal amount is greater than current amount
-    if (!amount < 0 || !amount > this.#amount) {
-      this.#amount -= amount;
-    } throw{
-      (new Error(""));
+    if (amount < 0) {
+      throw new Error('The amount provided cannot be negative');
     }
+    if (amount > this.#amount) {
+      throw new Error('You cannot withdraw more than account balance'); // err obj
+    }
+    this.#amount -= amount;
   }
 
   view() {
