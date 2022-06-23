@@ -7,7 +7,7 @@ class BankAccount {
 
   deposit(amount) {
     if (amount < 0) {
-      throw new Error('The amount provided cannot be negative'); // Use custom Error class
+      throw new Error('The amount provided cannot be negative'); 
     }
 
     this.#amount += amount;
@@ -15,11 +15,11 @@ class BankAccount {
 
   withdraw(amount) {
     if (amount < 0) {
-      throw new Error('The amount provided cannot be negative'); // Use custom Error class
+      throw new Error('The amount provided cannot be negative'); 
     }
 
     if (this.#amount < amount) {
-      throw new Error('You cannot withdraw more than account balance'); // Use custom Error class
+      throw new Error('You cannot withdraw more than account balance'); 
     }
 
     this.#amount -= amount;
