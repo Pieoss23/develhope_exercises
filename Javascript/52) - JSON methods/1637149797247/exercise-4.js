@@ -5,8 +5,8 @@ const person = {
   age: 25,
 };
 
-const replacer = (key, value) => typeof value === 'string' ? undefined : value;
+const filtered = (key, value) => typeof value === 'string' ? undefined : value;
 
-const json = JSON.parse(JSON.stringify(person, replacer));
+const json = JSON.parse(JSON.stringify(person, filtered));
 
 console.log(json); // Should return: { id: 1, age: 25 }
