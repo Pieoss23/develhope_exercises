@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <div id="container">
+      <ul class="todo-list"></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+  
+  async function createLista() {
+    let promise = await fetch('https://jsonplaceholder.typicode.com/todos')
+    let toDoArray = await promise.json()
+    let lista = document.querySelector('.todo-list')
+    toDoArray.forEach(element => {
+      let li = document.createElement("li")
+      li.textContent = element.title;
+      lista.appendChild(li)
+    });
+  }
+  createLista();
+
+
+</script>

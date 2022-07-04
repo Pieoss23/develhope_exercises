@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's List</h2>
+      <table id="person-table">
+        <tbody></tbody>
+      </table>
+      <button id="add-row">Add row</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+  document.getElementById('add-row').addEventListener('click', addRow)
+  function addRow() {
+    let tableBody = document.getElementById('person-table').childNodes[1];
+    tableBody.innerHTML +=
+   `<tr>
+      <td>Firstname:</td> 
+      <td>Lastname:</td>
+      <td>Age:</td>
+    </tr>`
+  }
+
+</script>

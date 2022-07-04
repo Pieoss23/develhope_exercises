@@ -7,7 +7,7 @@ const persons = [
   },
   {
     id: 2,
-    firstName: 'Maria',
+    firstName: '  ',
     lastName: 'Verdi',
     age: 32
   },

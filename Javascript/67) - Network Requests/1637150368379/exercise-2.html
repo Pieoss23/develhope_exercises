@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+  </body>
+</html>
+
+<script>
+  
+fetch('https://jsonplaceholder.typicode.com/todos/4')
+.then(response => response.json())
+.then(json => {
+
+data = JSON.stringify(json);
+localStorage.setItem('item', data);
+
+const dataPost = localStorage.getItem('item');
+const obj = JSON.parse(dataPost);
+
+const h2El = document.createElement('h2');
+h2El.innerHTML = obj.title;
+const box = document.getElementById('container');
+box.appendChild(h2El) 
+
+const inputEl = document.createElement('input');
+inputEl.setAttribute('type', 'checkbox');
+inputEl.setAttribute('checked', 'false');
+if(obj.completed == true) {
+  inputEl.checked = true
+} else if (obj.completed == false) {
+  inputEl.checked = false
+}
+
+box.appendChild(inputEl)
+})
+
+
+</script>

@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario"/>
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi"/>
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25"/>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+let firstName = document.getElementById('firstName').getAttribute('value')
+let lastName = document.getElementById('lastName').getAttribute('value')
+let age = document.getElementById('age').getAttribute('value')
+
+// let labelName = document.querySelector('label').textContent
+// let labelLastName = document.querySelector('label').textContent
+// let labelAge = document.querySelector('label').textContent
+
+
+  // console.log(labelName, firstName);
+  // console.log(labelLastName, lastName);
+  // console.log(labelAge, age);
+
+console.log(`First Name: ${firstName}`)
+console.log(`Last Name: ${lastName}`)
+console.log(`Age: ${age}`);
+
+  </script>
