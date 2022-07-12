@@ -35,7 +35,10 @@ class BankAccount {
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dc8e72388fac62b9a975cc3ec68dcd0b7aec66ec
 const bankAccount = new BankAccount(1000);
 bankAccount.deposit(500);
 bankAccount.deposit(200);
