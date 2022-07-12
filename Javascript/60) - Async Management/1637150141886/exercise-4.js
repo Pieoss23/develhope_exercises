@@ -52,9 +52,10 @@ const fetchPersonById = (id) =>
   new Promise((resolve) => resolve(persons.find((person) => person.id === id)));
 
 const fetchJobById = (person) =>
-  jobs.find((job) => job.id === person.id).jobTitle;
+new Promise ((resolve) => resolve( jobs.find((job) => job.id === person.id).jobTitle));
+ 
 
 fetchPersonById(1)
 .then((person) =>
-  console.log(`${person.firstName} ${person.lastName} ${fetchJobById(person)}`)
+  console.log(`${person.firstName} ${person.lastName} ${jobs.person}`)
 );

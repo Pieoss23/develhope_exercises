@@ -70,6 +70,7 @@
 
     form.addEventListener("submit", submitPersonForm);
   }
-
+  const formLoaded = new Event("personFormLoaded")
+  window.addEventListener("personFormLoaded", console.log("Person Form Loaded"));
   window.addEventListener("DOMContentLoaded", initForm);
 </script>

@@ -11,4 +11,27 @@
 
 <script>
   // Code here
+  function initForm(){
+    document.getElementById('person-form').innerHTML += `
+    <div>
+      <input id="firstName" type="text" /> 
+      <label>First Name</label>
+      <input id="lastName" type="text" /> 
+      <label>Last Name</label>
+      <input id="age" type="number" />
+      <label>Age</label>
+    </div>`;
+  }
+  initForm()
+  const submitPersonForm = event => {
+    event.preventDefault();
+    const person = {}
+      person.firstName = document.getElementById('firstName').value;
+      person.lastName = document.getElementById('lastName').value;
+      person.age = document.getElementById('age').value;
+      console.log(person);
+    }
+
+document.getElementById('person-form')
+document.addEventListener('submit', submitPersonForm)
 </script>
