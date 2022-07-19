@@ -1,10 +1,10 @@
 import ReactDOM  from 'react-dom';
-import App from './App';
+import { Hello } from './Hello';
 
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 
-root.render(<App />, root);
+root.render(<Hello />, root);
 
 
 
