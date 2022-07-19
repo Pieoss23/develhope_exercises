@@ -1,5 +1,5 @@
 import ReactDOM  from 'react-dom';
-import { Hello } from './Hello';
+import App from './App'
 
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
