@@ -1,3 +1,4 @@
+
 <html>
   <body>
     <div id="container">
@@ -70,7 +71,11 @@
 
     form.addEventListener("submit", submitPersonForm);
   }
-  const formLoaded = new Event("personFormLoaded")
-  window.addEventListener("personFormLoaded", console.log("Person Form Loaded"));
+
+  const newEvent = new Event("loadedStatus")
+  window.addEventListener("loadedStatus", () => console.log("Person Form Loaded"));
+
   window.addEventListener("DOMContentLoaded", initForm);
+  window.dispatchEvent(newEvent);
+  
 </script>
