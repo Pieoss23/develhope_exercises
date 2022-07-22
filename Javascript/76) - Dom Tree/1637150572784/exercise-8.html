@@ -15,6 +15,10 @@
 
 <script>
   // code here
-const heroHover = document.querySelectorAll('hero-list-item')
+  const heroList = document.querySelectorAll('li');
+  heroList.forEach(item => {
+    item.addEventListener('mouseenter', () => item.style.backgroundColor = 'red');
+    item.addEventListener('mouseleave', () => item.style.backgroundColor = 'transparent');
+  })
 
 </script>
