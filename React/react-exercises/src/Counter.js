@@ -2,7 +2,7 @@ import React from "react";
 
 export class Counter extends React.Component {
   state = {
-    count: this.props.initialValue ?? 0,
+    count: this.props.initialValue,
   };
 
   constructor(props) {
@@ -17,14 +17,22 @@ export class Counter extends React.Component {
   render() {
     return (
       <div>
-        <h1>Count: {this.state.count}</h1>;
+        <CounterDisplay count ={this.state.count} />;
       </div>
     );
   }
 }
+class CounterDisplay extends React.Component {
+    render() {
+      return (
+        <h1>Counter: {this.props.count}</h1>
+      )
+    }
+  }
 
-/* Modify the Counter component so that the initial value of the counter, the increment 
-interval and the increment amount are passed as props to the component.
+/* 
+Extract the h1 tag showing the count state variable into a new component called CounterDisplay
+and render it within the Counter component, passing it the count state variable as a prop.
 */
 
 Counter.defaultProps = {
