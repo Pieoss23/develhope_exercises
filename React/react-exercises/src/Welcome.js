@@ -5,12 +5,14 @@ export class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <p>Welcome, {this.props.name ?? "Pietrone"}</p>
-      <Age age = {
-        this.props.age >= 18
-        && <p>{this.props.age}</p>
-        } />
+        <p>Welcome, {this.props.name}</p>
+        <Age age="30" />
       </div>
     );
   }
 }
+
+Welcome.defaultProps = {
+  name: "Pietro",
+  lastName: "Oss",
+};
