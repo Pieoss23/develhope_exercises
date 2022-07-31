@@ -3,6 +3,7 @@ import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
 import { Hello } from "./Hello";
+import InteractiveWelcome from "./InterectiveWelcome";
 import { Welcome } from "./Welcome";
 
 class App extends React.Component {
@@ -14,6 +15,7 @@ class App extends React.Component {
         <Counter />
         <ClickCounter />
         <ClickTracker />
+        <InteractiveWelcome />
       </div>
     );
   }
@@ -21,5 +23,5 @@ class App extends React.Component {
 
 export default App;
 
-// Create a ClickTracker component that renders three buttons. Implement a single event handler for all three buttons, and track of which button was pressed last. 
-// Show the last button that was pressed in an h1 tag within the ClickTracker component. Tip: you can use the event object to access the target property of the event.
+//Create an InteractiveWelcome component that renders an input tag and the Welcome component.
+// Pass the current content of the input tag to the name prop of the Welcome component. The input tag should be a controlled component.
