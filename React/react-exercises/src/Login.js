@@ -7,7 +7,19 @@ export class Login extends React.Component{
         password: "",
         remember: false,
       };
-      
+
+      handleInputChange = (event) => {
+        const value = event.target.value;
+        const name = event.target.name;
+        const type = event.target.type;
+        const checked = event.target.checked;
+    
+        this.setState({
+          [name]: type === "checkbox" ? checked : value,
+        });
+      };
+
+
     render(){
         return(
             <div>
