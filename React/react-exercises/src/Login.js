@@ -19,6 +19,14 @@ export class Login extends React.Component{
         });
       };
 
+        onLogin = (prevState) => {
+            console.log(prevState)
+            this.setState({
+               ...prevState
+            })
+        }
+      
+
 
     render(){
         return(
@@ -40,6 +48,11 @@ export class Login extends React.Component{
             checked={this.state.remember}
             onChange={this.handleInputChange}
           />
+          <button 
+          type="button"
+          disabled={!(this.state.username && this.state.password)}
+          onClick={()=>{this.onLogin(this.state)}}
+          >Login</button>
         </div>
         )
     }
