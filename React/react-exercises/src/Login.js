@@ -1,34 +1,70 @@
-import { createRef } from "react";
 import React from "react";
 
 export class Login extends React.Component {
-  _formRef = createRef()
-  handlerFormSubmit = (event) => {
-    event.preventDefault()
+  state = {
+    username: "",
+    password: "",
+    remember: false,
+  };
 
-    const username = event.target.elements.username.value
-    const password = event.target.elements.password.value
-    const remember = event.target.elements.remember.checked
-    console.log({
-        username,
-        password,
-        remember
-    })
-  }
- 
+  handleInputChange = (event) => {
+    const value = event.target.value;
+    const name = event.target.name;
+    const type = event.target.type;
+    const checked = event.target.checked;
 
-    render() {
+    this.setState({
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  onLogin = (prevState) => {
+    console.log(prevState);
+    this.setState({
+      ...prevState,
+    });
+  };
+
+  handleReset = () => {
+    this.setState({
+      username: "",
+      password: "",
+      remember: false,
+    });
+  };
+
+
+  
+  render() {
     return (
       <div>
-        <h3>My Uncontrolled Form Text</h3>
-        <form ref={this._formRef} onSubmit={this.handlerFormSubmit}>
-            <input name="username" />    
-            <input name="password" type="password" />
-            <input name= "remember" type="checkbox" />
-        <div>
-            <button type="submit">Login</button>
-        </div>
-        </form>
+        <input
+          name="username"
+          value={this.state.username}
+          onChange={this.handleInputChange}
+        />
+        <input
+          name="password"
+          type="password"
+          value={this.state.password}
+          onChange={this.handleInputChange}
+        />
+        <input
+          name="remember"
+          type="checkbox"
+          checked={this.state.remember}
+          onChange={this.handleInputChange}
+        />
+        <button
+          type="button"
+          disabled={!(this.state.username && this.state.password)}
+          onClick={() => {
+            this.onLogin(this.state);
+          }}
+        >
+          Login
+        </button>
+        <button onClick={this.handleReset}>reset</button>
       </div>
     );
   }

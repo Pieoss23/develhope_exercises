@@ -4,7 +4,7 @@ import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
 import { Hello } from "./Hello";
 import InteractiveWelcome from "./InterectiveWelcome";
-import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 
 class App extends React.Component {
@@ -18,7 +18,7 @@ class App extends React.Component {
         <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome />
-        <Login />
+        <UncontrolledLogin />
       </div>
     );
   }
@@ -26,5 +26,3 @@ class App extends React.Component {
 
 export default App;
 
-// Implement an UncontrolledLogin component that implements all 
-// the operations of the Login component, but does so using uncontrolled components.
