@@ -6,7 +6,7 @@ export default class InteractiveWelcome extends React.Component {
     username: ''
  };
 
-  hendleChange = (event) => {
+  handleChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
 
@@ -27,7 +27,7 @@ export default class InteractiveWelcome extends React.Component {
         <input
           name="name"
           value={this.state.username}
-          onChange={this.hendleChange}
+          onChange={this.handleChange}
         />
       </div>
     );

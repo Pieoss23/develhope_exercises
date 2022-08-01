@@ -4,6 +4,7 @@ import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
 import { Hello } from "./Hello";
 import InteractiveWelcome from "./InterectiveWelcome";
+import { Login } from "./Login";
 import { Welcome } from "./Welcome";
 
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
         <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome />
+        <Login />
       </div>
     );
   }
@@ -23,5 +25,5 @@ class App extends React.Component {
 
 export default App;
 
-//Create an InteractiveWelcome component that renders an input tag and the Welcome component.
-// Pass the current content of the input tag to the name prop of the Welcome component. The input tag should be a controlled component.
+// Create a Login component containing three inputs: a username input, 
+// a password input and a remember checkbox. All three inputs should be controlled components.
