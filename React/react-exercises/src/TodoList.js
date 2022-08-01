@@ -18,7 +18,8 @@ export class TodoList extends React.Component{
     // to add a new activity in activity's array
     handleAdding = () => {
         this.setState({
-            activity: [...this.state.activity, this.state.newActivity]
+            activity: [...this.state.activity, this.state.newActivity],
+            newActivity: ""
         })
     }
 
