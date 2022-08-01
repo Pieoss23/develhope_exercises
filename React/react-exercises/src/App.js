@@ -1,24 +1,27 @@
 import React from "react";
+import { TodoList } from "./TodoList";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
 import { Hello } from "./Hello";
 import InteractiveWelcome from "./InterectiveWelcome";
 import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 
 class App extends React.Component {
   render() {
     return (
       <div>
-
-        <Hello />
-        <Welcome age name = "John" />
+        <Welcome />
+        <Login />
+         <Hello />
         <Counter />
         <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome />
-        <Login />
+        <TodoList />
+        <UncontrolledLogin />
       </div>
     );
   }
@@ -26,7 +29,7 @@ class App extends React.Component {
 
 export default App;
 
-// Add a "login" button to the Login component. 
-// This button should be disabled as long as the username and password inputs are empty.
-// When clicked, the event handler attached to the button should call an 
-// onLogin function passed as a prop to the Login component, passing it the state.
+// Modify the Login component from Forms 03 so that the "login" 
+// button background color is "red" when the inputted password's 
+// length is shorter than 8 characters, green otherwise.
+

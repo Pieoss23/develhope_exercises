@@ -29,6 +29,7 @@ export class Login extends React.Component{
 
 
     render(){
+      
         return(
             <div>
           <input
@@ -49,6 +50,11 @@ export class Login extends React.Component{
             onChange={this.handleInputChange}
           />
           <button 
+          style={{
+            backgroundColor: this.state.password.length >= 8 ? 'darkGreen' : 'darkRed',
+            color: 'white',
+            cursor: 'pointer'
+          }}
           type="button"
           disabled={!(this.state.username && this.state.password)}
           onClick={()=>{this.onLogin(this.state)}}
