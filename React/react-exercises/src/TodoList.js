@@ -28,11 +28,20 @@ export class TodoList extends React.Component{
         });
       };
 
+      handleDelete = (event) => {
+        const newArray = this.state.activity;
+        newArray.splice(event.target.value, 1);
+        this.setState({
+          activity: newArray,
+        });
+      };
+   
     render() {
         return (
             <div>
                 <ul>
-                    {this.state.activity.map((act, index) => <li key={act + index}>{act}</li>)}
+                    {this.state.activity.map((act, index) => <li key={act + index}>{act} <button value={index} onClick={this.handleDelete}>X</button></li>)}
+                    
                 </ul>
 
                 <input type="text"

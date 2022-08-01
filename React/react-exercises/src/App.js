@@ -30,5 +30,5 @@ class App extends React.Component {
 
 export default App;
 
-// Modify the TodoList by adding a "reset" button that clears the items array when clicked.
+// Modify the TodoList by adding a "remove" button to each li tag. When clicked, the event handler should remove corresponding item from the items array.
 
