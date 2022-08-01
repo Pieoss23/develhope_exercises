@@ -1,12 +1,12 @@
 import React from "react";
 import { TodoList } from "./TodoList";
-// import { ClickCounter } from "./ClickCounter";
-// import { ClickTracker } from "./ClickTracker";
-// import { Counter } from "./Counter";
-// import { Hello } from "./Hello";
-// import InteractiveWelcome from "./InterectiveWelcome";
-// import { Login } from "./Login";
-// import { UncontrolledLogin } from "./UncontrolledLogin";
+import { ClickCounter } from "./ClickCounter";
+import { ClickTracker } from "./ClickTracker";
+import { Counter } from "./Counter";
+import { Hello } from "./Hello";
+import InteractiveWelcome from "./InterectiveWelcome";
+import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 
 class App extends React.Component {
@@ -14,14 +14,14 @@ class App extends React.Component {
     return (
       <div>
         <Welcome />
-         {/*<Hello />
+        <Login />
+         <Hello />
         <Counter />
         <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome />
-        <Login />
-        <UncontrolledLogin /> */}
         <TodoList />
+        <UncontrolledLogin />
       </div>
     );
   }
@@ -29,5 +29,7 @@ class App extends React.Component {
 
 export default App;
 
-// Create an index.css file and import it within the index.js file. 
-// Add a .welcome class to the Welcome component that changes its background color and adds a border.
+// Modify the Login component from Forms 03 so that the "login" 
+// button background color is "red" when the inputted password's 
+// length is shorter than 8 characters, green otherwise.
+
