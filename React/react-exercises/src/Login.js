@@ -40,6 +40,10 @@ export class Login extends React.Component{
             checked={this.state.remember}
             onChange={this.handleInputChange}
           />
+          <button 
+          onClick={this.onLogin}
+          type="button"
+          >Login</button>
         </div>
         )
     }
