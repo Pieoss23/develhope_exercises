@@ -22,9 +22,12 @@ export default class InteractiveWelcome extends React.Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD
         <Welcome name={this.state.username} />
         <h5>Insert your name</h5>
 
+=======
+>>>>>>> forms-04
         <Welcome name={this.state.name} />
         <h5>Insert uyour name</h5>
         <input
