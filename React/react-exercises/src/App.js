@@ -1,34 +1,30 @@
 import React from "react";
-import { Container } from "./Container";
-import { TodoList } from "./TodoList";
+import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./DisplayLanguage";
+
 class App extends React.Component {
+  state = {
+    language: "en",
+  };
+
+  handleLanguageChange = (event) => {
+    this.setState({
+      language: event.target.value,
+    });
+  };
   render() {
     return (
       <div>
-        <Container title={"Title from props"}>
-          {this.props.children}
-          <TodoList
-            render={(activity, deleteFunction) => {
-              const todo = activity.map((act, index) => (
-                <li key={act + index}>
-                  {act}
-                  <button
-                    name="delete"
-                    onClick={() => {
-                      activity.splice(index, 1);
-                      this.setState({
-                        activity: activity,
-                      });
-                    }}
-                  >
-                    X
-                  </button>
-                </li>
-              ));
-              return <ul>{todo}</ul>;
-            }}
-          ></TodoList>
-        </Container>
+        <select
+          value={this.state.language}
+          onChange={this.handleLanguageChange}
+        >
+          <option value={"en"}>ENGLISH</option>
+          <option value={"ita"}>ITALIANO</option>
+        </select>
+        <LanguageContext.Provider value={this.state.language}>
+          <DisplayLanguage />
+        </LanguageContext.Provider>
       </div>
     );
   }
@@ -36,7 +32,5 @@ class App extends React.Component {
 
 export default App;
 
-// Modify the TodoList component so that, instead of rendering the items array within the ul tag,
-// it calls the function passed to its render prop, passing it the items array as a parameter,
-// as well as the function required to delete the item.
-// Pass a render prop to the TodoList component to correctly render and interact with the items array.
+// Create a LanguageContext and wrap a DisplayLanguage component within its provider.
+// Add a select tag to the component containing the DisplayLanguage component that allows the user to select the language, and pass it as a value to the Provider.
