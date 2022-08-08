@@ -1,5 +1,4 @@
-.welcome{
-    background-color: #8eeb7e;
-    border: 5px solid #00cae3;
-    padding: .6em;
+.container {
+    background-color: #FFFFFF;
+    border: 1px solid #FF0000;
 }
