@@ -1,6 +1,7 @@
 import React from "react";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
+import { Clock } from "./Clock";
 
 class App extends React.Component {
   state = {
@@ -12,6 +13,7 @@ class App extends React.Component {
       language: event.target.value,
     });
   };
+
   render() {
     return (
       <div>
@@ -24,6 +26,7 @@ class App extends React.Component {
         </select>
         <LanguageContext.Provider value={this.state.language}>
           <DisplayLanguage />
+          <Clock language={'en'}/>
         </LanguageContext.Provider>
       </div>
     );
