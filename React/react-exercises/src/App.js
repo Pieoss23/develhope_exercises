@@ -1,13 +1,12 @@
 import React from "react";
-
-import { ClickCounter } from "./ClickCounter";
+import { Login } from "./Login";
 
 class App extends React.Component {
 
   render() {
     return (
       <div>
-        <ClickCounter />
+        <Login />
       </div>
     );
   }
@@ -16,5 +15,6 @@ class App extends React.Component {
 export default App;
 
 
-// Rewrite the ClickCounter component from Events 01 as a function component,
-// and use the useState hook to track the state of the counter.
+// Rewrite the Login component from Forms 03 as a function component,
+// and use the useState hook to track the state of the username,
+// password and remember inputs. Tip: you can use useState more than once.
