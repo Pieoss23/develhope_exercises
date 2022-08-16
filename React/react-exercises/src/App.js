@@ -1,14 +1,13 @@
 import React from "react";
-import Welcome from "./Welcome"
-import { Sum } from "./Sum";
+
+import { ClickCounter } from "./ClickCounter";
 
 class App extends React.Component {
 
   render() {
     return (
       <div>
-        <Welcome />
-        <Sum />
+        <ClickCounter />
       </div>
     );
   }
@@ -17,5 +16,5 @@ class App extends React.Component {
 export default App;
 
 
-// What happens if the numbers prop of the Sum component is not set?
-// How can you set a default value for this prop?
+// Rewrite the ClickCounter component from Events 01 as a function component,
+// and use the useState hook to track the state of the counter.
