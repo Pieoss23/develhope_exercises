@@ -1,12 +1,12 @@
 import React from "react";
-import { Login } from "./Login";
+import { ClickCounter } from "./ClickCounter";
 
 class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Login />
+      <div className="main_container">
+        <ClickCounter />
       </div>
     );
   }
@@ -15,6 +15,6 @@ class App extends React.Component {
 export default App;
 
 
-// Rewrite the Login component from Forms 03 as a function component,
-// and use the useState hook to track the state of the username,
-// password and remember inputs. Tip: you can use useState more than once.
+// Add a side effect to the ClickCounter component from useState 01
+// that calls a onCounterChange function with the current value of the counter
+// every time value of the counter changes. The function should be received as a prop.

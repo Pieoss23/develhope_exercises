@@ -5,7 +5,7 @@ import "./index.css"
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 
-root.render(<App />, root);
+root.render(<App />);
 
 
 
