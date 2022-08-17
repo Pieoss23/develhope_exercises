@@ -1,12 +1,12 @@
 import React from "react";
-import { ClickCounter } from "./ClickCounter";
+import { Counter } from "./Counter";
 
 class App extends React.Component {
 
   render() {
     return (
       <div className="main_container">
-        <ClickCounter />
+        <Counter />
       </div>
     );
   }
@@ -15,6 +15,6 @@ class App extends React.Component {
 export default App;
 
 
-// Add a side effect to the ClickCounter component from useState 01
-// that calls a onCounterChange function with the current value of the counter
-// every time value of the counter changes. The function should be received as a prop.
+//Rewrite the Counter component from State 1 as a function component and add a side effect 
+// that initializes the interval as soon as the component renders, and clears it when the component unmounts.
+
