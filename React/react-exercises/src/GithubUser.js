@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-export function GithubUser({ username='Pieoss23' }) {
+export function GithubUser({ username }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);

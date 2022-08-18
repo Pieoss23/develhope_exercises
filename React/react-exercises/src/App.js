@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="main_container">
-        <GithubUser />
+        <GithubUser username='Pieoss23' />
       </div>
     );
   }
