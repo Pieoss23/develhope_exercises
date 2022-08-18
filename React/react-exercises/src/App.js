@@ -1,12 +1,19 @@
 import React from "react";
-import { GithubUser } from "./GithubUser";
+import { CarDetails } from "./CarDetails";
+
+const initialData = {
+  brand: "Fiat",
+  model: "Punto",
+  year: "2009",
+  color: "gray",
+}
 
 class App extends React.Component {
 
   render() {
     return (
       <div className="main_container">
-        <GithubUser />
+        <CarDetails initialData={initialData}/>
       </div>
     );
   }
@@ -15,5 +22,7 @@ class App extends React.Component {
 export default App;
 
 
-// Modify the useGithubUser hook to return the function to fetch the data of a Github user,
-// along with the data of the user and the error and loading states.
+// Create a CarDetails uncontrolled form that uses the HTML Form API to allow
+// the user to insert details about a car, such as the model, the year and the color. 
+// Allow the form to receive a initialData prop that contains the default values of each input, 
+// and reset the form every time the initialData value changes.
