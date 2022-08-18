@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-export function GithubUser({ username }) {
+export function GithubUser({ username='Pieoss23' }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -22,8 +22,7 @@ export function GithubUser({ username }) {
         setLoading(false);
       });
   }, [username]);
-  console.log(data)
-
+  console.log(data);
 
   return (
     <div>
@@ -31,7 +30,6 @@ export function GithubUser({ username }) {
       {data && <img alt="avatar_prof" src={data.avatar_url}></img>}
       {data && <h3>{data.location}</h3>}
       {data && <h5>{data.bio}</h5>}
-
     </div>
   );
 }
