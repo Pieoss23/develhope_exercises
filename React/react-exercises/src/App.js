@@ -1,16 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom"
 import { Welcome } from "./Welcome";
+import { HookCounter } from "./HookCounter";
 export function App() {
     
     return (
         <Routes>
             <Route path="/" element={<Welcome name="Pietro" />} />
+            <Route path="/counter" element={<HookCounter />} />
         </Routes>
     )
 
 }
 
 
-/* Create an App component that wraps a Routes component and add a single Route to the / path that renders
-the Welcome component from Function Components 01, passing it a name prop. Render the App component within a BrowserRouter component.*/
+/* Add a new Route to the /counter path that renders the Counter component from useState 01.*/
