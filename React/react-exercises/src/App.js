@@ -12,6 +12,7 @@ export function App() {
         <Route path="/" element={<Welcome name="Pietro" />} />
         <Route path="/counter" element={<HookCounter />} />
         <Route path="/users" element={<GithubUserList />}>
+        <Route index element={<h3>Add a user and select it</h3>}/>
         <Route path=":username" element={<ShowGithubUser />} />
         </Route>
       </Routes>
@@ -20,8 +21,4 @@ export function App() {
   );
 }
 
-/* Add a Route to the users path that shows the GihubUserList component from useEffect 04.
- Modify it so that instead of showing the GithubUser component for each username entered,
- it shows a link to a nested route that shows the ShowGithubUser component. 
- In doing so, remove the /users/:username route from the App component, 
- and add a new nested route within the /users route.*/
+/* Add an index route to the GithubUserList route that shows the "Add a user and select it" message. */
