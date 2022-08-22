@@ -1,28 +1,28 @@
-import React from "react";
-import { CarDetails } from "./CarDetails";
+import React, { useState } from "react";
+import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
 
-const initialData = {
-  brand: "Fiat",
-  model: "Punto",
-  year: "2009",
-  color: "gray",
-}
+export default function App() {
+    const [language, setLanguage] = useState('en')
 
-class App extends React.Component {
+    function handleLanguage(e) {
+        setLanguage(e.target.value)
+    }
 
-  render() {
     return (
-      <div className="main_container">
-        <CarDetails initialData={initialData}/>
-      </div>
-    );
-  }
+        <div className="mainContainer">
+            <select value={language} onChange={handleLanguage}>
+                <option value='en'>English</option>
+                <option value='it'>Italiano</option>
+            </select>
+
+            <LanguageContext.Provider value={language}>
+                <DisplayLanguage />
+            </LanguageContext.Provider>
+        </div>
+    )
+
 }
 
-export default App;
-
-
-// Create a CarDetails uncontrolled form that uses the HTML Form API to allow
-// the user to insert details about a car, such as the model, the year and the color. 
-// Allow the form to receive a initialData prop that contains the default values of each input, 
-// and reset the form every time the initialData value changes.
+/* Rewrite the DisplayLanguage component from Context 02 to be a function component,
+and access the LanguageContext through the useContext hook. */
