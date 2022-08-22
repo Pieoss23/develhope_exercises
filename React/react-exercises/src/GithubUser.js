@@ -12,7 +12,7 @@ export function GithubUser({username='Pieoss23'}){
             {data && <h3>{data.location}</h3>}
             {data && <h5>{data.bio}</h5>}
             {loading && <h1>Loading...</h1>}
-            {error && <h1>Error!!</h1>}
+            {error && <h1>Error!! User not found</h1>}
         </div>
     )
 }
