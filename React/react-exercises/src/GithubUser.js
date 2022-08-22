@@ -1,17 +1,17 @@
-import { useGithubUser } from "./useGithubUser"
+import { useGithubUser } from "./useGithubUser";
 
-export function GithubUser({username='Pieoss23'}){
-
-    const {data, error, loading} = useGithubUser(username);
+export function GithubUser({ username }) {
+    
+    const {users, error, isLoading} = useGithubUser(username);
 
     
     return(
         <div>
-            {data && <h1>{data.name}</h1>}
-            {data && <img alt="avatar_prof" src={data.avatar_url}></img>}
-            {data && <h3>{data.location}</h3>}
-            {data && <h5>{data.bio}</h5>}
-            {loading && <h1>Loading...</h1>}
+            {users && <h1>{users.name}</h1>}
+            {users && <img alt="avatar_prof" src={users.avatar_url}></img>}
+            {users && <h3>{users.location}</h3>}
+            {users && <h5>{users.bio}</h5>}
+            {isLoading && <h1>Loading...</h1>}
             {error && <h1>Error!! User not found</h1>}
         </div>
     )
