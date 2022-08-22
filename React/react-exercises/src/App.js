@@ -1,21 +1,16 @@
 import React from "react";
-import { HookCounter } from "./HookCounter"
-
-
-
-class App extends React.Component {
-
-  render() {
+import { Routes, Route } from "react-router-dom"
+import { Welcome } from "./Welcome";
+export function App() {
+    
     return (
-      <div className="main_container">
-        <HookCounter />
-      </div>
-    );
-  }
+        <Routes>
+            <Route path="/" element={<Welcome name="Pietro" />} />
+        </Routes>
+    )
+
 }
 
-export default App;
 
-
-// Modify the useCounter custom hook from Custom Hooks 01 to use 
-// the useCallback to memoize the functions used to increment, decrement and reset the counter.
+/* Create an App component that wraps a Routes component and add a single Route to the / path that renders
+the Welcome component from Function Components 01, passing it a name prop. Render the App component within a BrowserRouter component.*/
