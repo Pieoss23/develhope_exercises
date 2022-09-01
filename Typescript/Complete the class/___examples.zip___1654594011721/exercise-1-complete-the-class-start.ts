@@ -3,41 +3,41 @@
  */
 
 class Currency {
-    // Add types for these fields and make them private.
-    // Hint: Look at the type of values being passed when `new Currency()`
-    // is called below.
+  // Add types for these fields and make them private.
+  // Hint: Look at the type of values being passed when `new Currency()`
+  // is called below.
 
-    name;
-    code;
-    symbol;
+  private name: string;
+  private code: string;
+  private symbol: string;
+    
+  // Add types to the constructor parameters.
 
-    // Add types to the constructor parameters.
+  constructor(name: string, code: string, symbol: string) {
+    this.name = name;
+    this.code = code;
+    this.symbol = symbol;
 
-    constructor(name, code, symbol) {
-        this.name = name;
+    // Store the `code` and `symbol` parameter values in
+    // their corresponding class fields.
+  }
 
-        // Store the `code` and `symbol` parameter values in
-        // their corresponding class fields.
+  // Methods are public by default.
+  // Add a visibility modifier to make it clear this method is public.
+  //
+  // Add a return type for this method
+  // Hint: Look at the inferred return type.
 
+  describe(): void {
+    // Replace the `null` values below with the appropriate field values.
+    // Hint: Access field values with: this.fieldName
 
-    }
+    let description = `The ${this.name} currency `;
+    description += `has the code ${this.code} `;
+    description += `and uses the symbol ${this.symbol}.`;
 
-    // Methods are public by default.
-    // Add a visibility modifier to make it clear this method is public.
-    //
-    // Add a return type for this method
-    // Hint: Look at the inferred return type.
-
-    describe() {
-        // Replace the `null` values below with the appropriate field values.
-        // Hint: Access field values with: this.fieldName
-
-        let description = `The ${null} currency `;
-        description += `has the code ${null} `;
-        description += `and uses the symbol ${null}.`;
-
-        console.log(description);
-    }
+    console.log(description);
+  }
 }
 
 // ----
@@ -48,7 +48,8 @@ console.log(currencyNaira);
 
 // Call the `describe()` method on the `currencyNaira` object.
 
-
+const currencyNairaDescribe = currencyNaira.describe();
+console.log(currencyNairaDescribe);
 
 // ----
 
@@ -57,8 +58,8 @@ const currencyUsDollar = new Currency("United States dollar", "USD", "$");
 console.log(currencyUsDollar);
 
 // Call the `describe()` method on the `currencyUsDollar` object.
-
-
+const currencyUsDollarDescribe = currencyUsDollar.describe();
+console.log(currencyUsDollarDescribe)
 
 // ----
 
