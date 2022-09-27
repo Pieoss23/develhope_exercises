@@ -9,7 +9,7 @@ import {
     PlanetData,
 } from "./lib/validation";
 
-import { initMulterMiddleware } from "./lib/middleware/muter";
+import { initMulterMiddleware } from "./lib/middleware/multer";
 
 const upload = initMulterMiddleware();
 
