@@ -1,6 +1,7 @@
 import addFormats from "ajv-formats";
 import { Validator, ValidationError } from "express-json-validator-middleware";
 import { ErrorRequestHandler } from "express";
+
 const validator = new Validator({
     coerceTypes: true,
 });
