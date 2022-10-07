@@ -28,4 +28,4 @@ export const validationErrorMiddleware: ErrorRequestHandler = (
     }
 };
 
-export * from "./planets";
+export * from "./planet";
