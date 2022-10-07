@@ -1,17 +1,19 @@
 import express from "express";
 import "express-async-errors";
 import prisma from "./lib/prisma/client";
-
+import cors from "cors";
 import {
     validate,
     planetSchema,
     validationErrorMiddleware,
     PlanetData,
 } from "./lib/validation";
-
+const corsOption = {
+    origin: "http://localhost:8080"
+}
 const app = express();
 app.use(express.json());
-
+app.use(cors(corsOption))
 app.get("/planets", async (request, response) => {
     const planets = await prisma.planet.findMany();
     response.json(planets);
